@@ -1,33 +1,67 @@
-$('document').ready(function() {
-    $('#button').click(function() {
-        /**
-        console.log('clicked');
-        $('#employees').children().each(function(i, div) {
-            $('#employees').prepend(div);
-        });
-        */
-        var page = getParameterByName('page');
+$(document).ready( () => {
+  var industry = '';
+  var numEmployees = '';
 
-        $.ajax({
-            type: 'GET',
-            url: '/employees',
-            dataType: 'json',
-            data: {'page' : page},
-            success: function(response) {
-                console.log(Object.keys(response));
-                console.log(response.data);
+  $('#st').hide();
 
-                for (var i = 0; i < response.data.length; i++) {
-                    console.log(response.data[i]);
-                }
+  var scrolling = false;
+  $(document).scroll( () => {
+    if (!scrolling) {
+      if ($(this).scrollTop() > 100) {
+          //$('#nav').css('background-color', 'rgba(255,255,255,1)');
+          $('#nav').removeClass('animation-fadeOut');
+          $('#nav').addClass('animation-fadeIn');
+      } else {
+        $('#nav').removeClass('animation-fadeIn');
+        $('#nav').addClass('animation-fadeOut');
+          //$('#nav').css('background-color', 'rgba(255,255,255,0)');
+      }
 
-            }
-        });
+      if ($(this).scrollTop() == $("a[name='pane2']").offset().top) {
+          $('#st').fadeIn();
+      }
+      scrolling = true;
+      setTimeout( () =>{
+        scrolling=false;
+      }, 10);
+    }
+  });
 
-    });
+  //Attempt to scroll when an industry is selected
+  $('#industry-select').change(() => {
+    industry = $('#industry-select').val();
+    if (numEmployees != '' && industry != '') {
+      scrollToAnchor('pane2');
+    }
+  });
+
+  //Attempt to scroll when done typing
+  var typingTimer;
+  $('#employee-input').on('keyup', () => {
+    clearTimeout(typingTimer);
+    typingTimer = setTimeout(() => {
+      numEmployees = $('#employee-input').val();
+      if (industry != '' && numEmployees != '') {
+        scrollToAnchor('pane2');
+      }
+    }, 500);
+  });
+
+  $('#employee-input').on('keydown', () => {
+    clearTimeout(typingTimer);
+  });
+
+  $('.activate-button').click( () => {
+    scrollToAnchor('pane2');
+  });
 
 
 });
+
+function scrollToAnchor(anchorname) {
+  var anchorTag = $("a[name='"+ anchorname +"']");
+  $('html, body').animate({scrollTop: (anchorTag.offset().top)}, 'slow');
+}
 
 
 function getParameterByName(name, url) {

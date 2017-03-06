@@ -16,3 +16,4 @@ Route::get('/', function () {
 
 });
   Route::get('/employees', 'EmployeeController@index');
+Route::post('/api', 'ApiController@index');

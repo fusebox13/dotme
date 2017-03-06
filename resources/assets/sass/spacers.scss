@@ -1,0 +1,196 @@
+/*-- Padding(em)--*/
+
+@for $i from 1 through 30 {
+  .p-#{$i}-em {
+    padding: $i + em
+  }
+}
+
+@for $i from 1 through 30 {
+  .pt-#{$i}-em {
+    padding-top: $i + em
+  }
+}
+
+@for $i from 1 through 30 {
+  .pb-#{$i}-em {
+    padding-bottom: $i + em
+  }
+}
+
+@for $i from 1 through 30 {
+  .pl-#{$i}-em {
+    padding-left: $i + em
+  }
+}
+@for $i from 1 through 30 {
+  .pr-#{$i}-em {
+    padding-right: $i + em
+  }
+}
+
+/*-- Padding(px) -- */
+@for $i from 1 through 100 {
+  .p-#{$i}-px {
+    padding: $i + px
+  }
+}
+
+@for $i from 1 through 100 {
+  .pt-#{$i}-px {
+    padding-top: $i + px
+  }
+}
+
+@for $i from 1 through 100 {
+  .pb-#{$i}-px {
+    padding-bottom: $i + px
+  }
+}
+
+@for $i from 1 through 100 {
+  .pl-#{$i}-px {
+    padding-left: $i + px
+  }
+}
+
+@for $i from 1 through 100 {
+  .pr-#{$i}-px {
+    padding-right: $i + px
+  }
+}
+
+/*-- Padding(vw/vh) -- */
+
+@for $i from 1 through 100 {
+  .p-#{$i}-v {
+    padding-top: $i + vh;
+    padding-bottom: $i + vh;
+    padding-right: $i + vw;
+    padding-left: $i + vw;
+  }
+}
+
+@for $i from 1 through 100 {
+  .pt-#{$i}-v {
+    padding-top: $i + vh
+  }
+}
+
+@for $i from 1 through 100 {
+  .pb-#{$i}-v {
+    padding: $i + vh
+  }
+}
+
+@for $i from 1 through 100 {
+  .pl-#{$i}-v {
+    padding: $i + vw
+  }
+}
+
+@for $i from 1 through 100 {
+  .pr-#{$i}-v {
+    padding: $i + vw
+  }
+}
+
+
+/*-- Margin(em) --*/
+
+@for $i from 1 through 30 {
+  .m-#{$i}-em {
+    margin: $i + em
+  }
+}
+
+@for $i from 1 through 30 {
+  .mt-#{$i}-em {
+    margin-top: $i + em
+  }
+}
+
+@for $i from 1 through 30 {
+  .mb-#{$i}-em {
+    margin-bottom: $i + em
+  }
+}
+
+@for $i from 1 through 30 {
+  .ml-#{$i}-em {
+    margin-left: $i + em
+  }
+}
+
+@for $i from 1 through 30 {
+  .mr-#{$i}-em {
+    margin-right: $i + em
+  }
+}
+
+/*-- Margin(px) -- */
+
+@for $i from 1 through 30 {
+  .m-#{$i}-px {
+    margin: $i + px
+  }
+}
+
+@for $i from 1 through 30 {
+  .mt-#{$i}-px {
+    margin-top: $i + px
+  }
+}
+
+@for $i from 1 through 30 {
+  .mb-#{$i}-px {
+    margin-bottom: $i + px
+  }
+}
+
+@for $i from 1 through 30 {
+  .ml-#{$i}-px {
+    margin-left: $i + px
+  }
+}
+
+@for $i from 1 through 30 {
+  .mr-#{$i}-px {
+    margin-right: $i + px
+  }
+}
+
+/*-- Margin(vw/vh) -- */
+
+@for $i from 1 through 30 {
+  .m-#{$i}-v {
+    margin-top: $i + vh;
+    margin-bottom: $i + vh;
+    margin-left: $i + vw;
+    margin-right: $i + vw;
+  }
+}
+
+@for $i from 1 through 30 {
+  .mt-#{$i}-v {
+    margin-top: $i + vh
+  }
+}
+
+@for $i from 1 through 30 {
+  .mb-#{$i}-v {
+    margin-bottom: $i + vh
+  }
+}
+
+@for $i from 1 through 30 {
+  .ml-#{$i}-v {
+    margin-left: $i + vw
+  }
+}
+
+@for $i from 1 through 30 {
+  .mr-#{$i}-v {
+    margin-right: $i + vw
+  }
+}

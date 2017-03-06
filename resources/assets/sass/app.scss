@@ -1,2 +1,184 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+html, body {
+  height: 100%;
+  width: 100%;
+}
 
+
+#pane-1 {
+  background-image: url('/images/headerimage.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  //padding-top: 12em;
+  display: flex;
+  align-items:center;
+}
+
+#pane-2 {
+}
+
+#pane-3 {
+  background-image: url('/images/strydecomputer.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#form-box {
+  padding: 3em;
+}
+
+.animation-fadeIn {
+  animation: fadeIn 0.25s forwards;
+  ;
+}
+
+.animation-fadeOut {
+  animation: fadeOut 0.25s forwards;
+}
+
+@keyframes fadeIn {
+  from { background-color: rgba(255,255,255,0)}
+  to { background-color: rgba(255,255,255,1)}
+}
+
+@keyframes fadeOut {
+  from { background-color: rgba(255,255,255,1)}
+  to { background-color: rgba(255,255,255,0)}
+}
+
+.savings-text {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  margin-bottom: 1em;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.text-orange {
+  color: #ff9437;
+}
+.text-blue {
+  text-decoration: underline;
+  color: rgba(91,192,222,1);
+}
+
+.savings-bar-container {
+  box-shadow: 1px 1px lightgrey;
+  width: 100%;
+  background:rgba(91,192,222,0.5);
+  height: 4em;
+  overflow-x: hidden;
+  border-radius: 5px;
+}
+
+.savings-bar {
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: -100%;
+    background:rgba(91,192,222,0.5);
+  width: 100%;
+  height: 100%;
+  animation: slideIn 1s forwards;
+
+}
+
+.chevron {
+  margin-right: -3em;
+  width: auto;
+  height: 4em
+}
+.savings {
+  font-size: 2em;
+}
+
+@keyframes slideIn {
+  from { margin-left: -100%}
+  to { margin-left: -10%}
+}
+/* Small devices (tablets, 768px and up) */
+
+
+@media (max-width: 768px) {
+  #brand {
+    height: 2.5em;
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+  }
+  #pane-1 {
+    align-items: flex-end;
+  }
+  #pane-1-row-1 {
+    padding-bottom: 3em;
+  }
+
+  #pane-3 {
+    background-position: -6em 0em;
+  }
+
+  .savings-text {
+    font-size: 2em;
+    color: white;
+  }
+
+ }
+
+ @media (max-width: 330px) {
+   #brand{
+      height: 2.5em;
+
+    }
+
+ }
+
+
+
+@media (max-width: 768px) and (orientation : portrait) {
+ #pane-1 {
+   background-position: -25em;
+   //padding-top: 15em;
+ }
+ #pane-3 {
+   background-position: -25em 0em;
+ }
+
+}
+
+@media (max-width: 768px) and (orientation : landscape) {
+  .col-xs-12 {
+    width: 80%;
+  }
+  .container {
+    margin-left: 0;
+  }
+
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width : 769px) and (max-width: 992px) {
+  #brand {
+    display: inline-block;
+    height: 3em;
+  }
+ }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 993px) {
+  #brand {
+    height: 4em;
+  }
+
+}
+
+@media (min-width: 993px) and (orientation : portrait){
+  #brand {
+    height: 3em;
+  }
+  #pane-1 {
+    background-position: -30em 0em;
+  }
+
+
+}
